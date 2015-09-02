@@ -54,10 +54,10 @@ namespace TimeCal
         {
             if (sp.IsOpen)
             {
+                sp.Close();
                 threadRequest.Abort();
                 rxThread.Abort();
-                Thread.Sleep(100);
-                sp.Close();
+              
             }
         }
 
